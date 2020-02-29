@@ -18,8 +18,8 @@ Uses ffmpeg, h264_omx for encoding, and then streaming video output to a Twitch 
 - https://www.gnu.org/software/bash/
 
 A systemd service will run the script when the Pi is rebooted as well.
-https://wiki.debian.org/systemd
-https://medium.com/@benmorel/creating-a-linux-service-with-systemd-611b5c8b91d6
+- https://wiki.debian.org/systemd
+- https://medium.com/@benmorel/creating-a-linux-service-with-systemd-611b5c8b91d6
 
 ## Prerequisites:
 
