@@ -12,19 +12,19 @@ Flash this to a microSD card that you put in the Raspberry Pi (I used Etcher - h
 ## Software:
 Uses ffmpeg, h264_omx for encoding, and then streaming video output to a Twitch ingest server with a simple Bash shell script. 
 
-https://www.ffmpeg.org
-https://www.gnu.org/software/bash/
+- https://www.ffmpeg.org
+- https://www.gnu.org/software/bash/
 
 A systemd service will run the script when the Pi is rebooted as well.
 https://wiki.debian.org/systemd
 
 ## Prerequisites:
-Install ffmpeg - sudo apt install ffmpeg
-Use the pi user to run the script
-Put this script in /home/pi/bin/sh - The service is looking for it there
-Make the script exectuable with chmod +x twitch_stream.sh
-Follow the instructions at the Debian wiki to set up the systemd service.
+- Install ffmpeg - sudo apt install ffmpeg
+- Use the pi user to run the script
+- Put this script in /home/pi/bin/sh - The service is looking for it there
+- Make the script exectuable with chmod +x twitch_stream.sh
+- Follow the instructions at the Debian wiki to set up the systemd service.
 
-Uses your Twitch account stream key
-Remove {stream_key}, put your actual key there
+Uses your Twitch account stream key in the shell script.
+Find the line with {stream_key} and put your actual key there in place of {stream_key} .
 See https://stream.twitch.tv/ingests/ for more information and the server near you.
