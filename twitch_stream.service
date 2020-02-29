@@ -1,0 +1,22 @@
+# twitch_stream.service
+# Launch a service to stream to Twitch via systemd
+# https://wiki.debian.org/systemd
+
+# Last updated: 02/28/2020
+
+[Unit]
+Description=Twitch stream service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=pi
+ExecStart=/home/pi/bin/sh/twitch_stream.sh
+
+[Install]
+WantedBy=multi-user.target
+
+# End of file
