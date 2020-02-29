@@ -29,5 +29,5 @@ Make the script exectuable with
      chmod +x twitch_stream.sh
 
 Uses your Twitch account stream key in the shell script.
-Find the line with {stream_key} and put your actual key there in place of {stream_key} .
+Find the line with {stream_key} and put your actual key there in place of {stream_key}
 See https://stream.twitch.tv/ingests/ for more information and the server near you.
