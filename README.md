@@ -17,8 +17,8 @@ I am assuming some familiarity with the Raspberry Pi, Debian Linux, and the usin
      - Eject the microSD card, then put it back in. You will need to add files to the root of the /boot filesystem.
 
 - There are two files you need to run the Raspberry Pi headless - that is, without a keyboard, mouse, or monitor.
-- ssh file - This is an empty file used to enable SSH on boot. Put it in the root of the microSD card on the /boot filesystem
-- wpa_supplicant.conf - I uploaded an example file - wpa_supplicant.conf.example - to this repo. Be sure to edit it to use your WiFi network name, WiFi network password, and verify your country code. Once the file is edited, rename it to wpa_supplicant.conf and put in the root of your microSD card on the /boot filesystem.
+      - ssh file - This is an empty file used to enable SSH on boot. Put it in the root of the microSD card on the /boot filesystem
+      - wpa_supplicant.conf - I uploaded an example file - wpa_supplicant.conf.example - to this repo. Be sure to edit it to use your WiFi network name, WiFi network password, and verify your country code. Once the file is edited, rename it to wpa_supplicant.conf and put in the root of your microSD card on the /boot filesystem.
 
 - Once the two files are on the microSD card, eject it, put in the Pi, and plug the Pi in. 
 
@@ -26,7 +26,6 @@ I am assuming some familiarity with the Raspberry Pi, Debian Linux, and the usin
 
 ## Software:
 Uses ffmpeg, h264_omx for encoding, and then streaming video output to a Twitch ingest server with a simple Bash shell script.
-
 - https://www.ffmpeg.org
 - https://www.gnu.org/software/bash/
 
@@ -38,12 +37,13 @@ A systemd service will run the script when the Pi is rebooted as well.
 
 Install ffmpeg from command line
 
- $ sudo apt install ffmpeg
+   $ sudo apt install ffmpeg
 
 Put the twitch_stream.service file in /etc/systemd/system/
 
 Uses the pi user to run the script. Put the twitch_stream.sh script in /home/pi/bin/sh - The systemd service is looking for it there.
-Make the script exectuable with 
+Make the script exectuable with
+
     $ chmod +x twitch_stream.sh
 
 Uses your Twitch account stream key in the shell script.
@@ -52,8 +52,8 @@ See https://stream.twitch.tv/ingests/ for more information and the server near y
 
 Once the service file and shell script are in the right location, you can start the service
 
-$ sudo systemctl start twitch_stream
+     $ sudo systemctl start twitch_stream
 
 Make the service start on a reboot or loss of power to the Pi. 
 
-$ systemctl enable twitch_stream
+     $ systemctl enable twitch_stream
