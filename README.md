@@ -1,5 +1,5 @@
 # twitch_stream
-Stream to Twitch via a systemd service and Bash shell script
+Stream to Twitch via a systemd service and Bash shell script.
 
 I am assuming some familiarity with the Raspberry Pi, Debian Linux, and the using the Bash shell.
 
@@ -37,7 +37,7 @@ A systemd service will run the script when the Pi is rebooted as well.
 
 Install ffmpeg from command line
 
-   $ sudo apt install ffmpeg
+     $ sudo apt install ffmpeg
 
 Put the twitch_stream.service file in /etc/systemd/system/
 
