@@ -1,5 +1,5 @@
-# twitch_stream
-Stream to Twitch via a systemd service and Bash shell script.
+# Twitch Streaming Pi
+Stream to Twitch via a systemd service and Bash shell script, running on a Raspberry Pi.
 
 I am assuming some familiarity with the Raspberry Pi, Debian Linux, and the using the Bash shell.
 
