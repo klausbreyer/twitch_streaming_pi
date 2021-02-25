@@ -1,5 +1,5 @@
 # Twitch Streaming Pi
-Stream to Twitch via a systemd service and Bash shell script, running on a Raspberry Pi.
+Stream video (only) to Twitch via a systemd service and Bash shell script, running on a Raspberry Pi.
 
 I am assuming some familiarity with the Raspberry Pi, Debian Linux, and the using the Bash shell.
 
@@ -57,3 +57,8 @@ Once the service file and shell script are in the right location, you can start 
 Make the service start on a reboot or loss of power to the Pi. 
 
      $ systemctl enable twitch_stream
+
+## Future features I want to add to the script:
+
+- Add ffmpeg audio streaming from the built-in microphone(s) on my Web cam; can be turned on and off by commenting out a line in the script and restarting it.
+- Add ffmpeg audio streaming from a USB microphone; can be turned on and off by commenting out a line in the script and restarting it.
