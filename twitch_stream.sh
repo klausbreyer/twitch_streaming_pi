@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Source the variable to config the stream kmey.
-source key.config
+source /home/pi/twitch_streaming_pi/key.config
 
 # Sets the input source, video settings, output settings, send to Twitch ingest server
 # Higher resolution (i.e., for a Logitech 920 Webcam)
