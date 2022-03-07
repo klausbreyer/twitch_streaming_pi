@@ -44,7 +44,7 @@ Clone the repo in ~
 
 Put the twitch_stream.service file in /etc/systemd/system/
 
-     $ sudo ln -s twitch_streaming_pi/twitch_stream.service /etc/systemd/system/
+     f
 
 Make the script exectuable with
 
@@ -58,9 +58,12 @@ Once the service file and shell script are in the right location, you can start 
 
      $ sudo systemctl start twitch_stream
 
+Debug
+     $ journalctl -u twitch_stream -b
+
 Make the service start on a reboot or loss of power to the Pi.
 
-     $ systemctl enable twitch_stream
+     systemctl enable twitch_stream
 
 ## Future features I want to add to the script:
 
