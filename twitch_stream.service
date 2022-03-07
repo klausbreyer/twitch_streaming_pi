@@ -14,7 +14,7 @@ Type=simple
 Restart=always
 RestartSec=1
 User=pi
-ExecStart=/home/pi/bin/sh/twitch_stream.sh
+ExecStart=/home/pi/twitch_streaming_pi/twitch_stream.sh
 
 [Install]
 WantedBy=multi-user.target

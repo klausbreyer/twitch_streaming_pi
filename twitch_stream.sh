@@ -18,6 +18,6 @@
 
 # Sets the input source, video settings, output settings, send to Twitch ingest server
 # Higher resolution (i.e., for a Logitech 920 Webcam)
-ffmpeg -f video4linux2 -s 1280x1024 -i /dev/video0 -c:v h264_omx -threads 0 -f flv "rtmp://live-yto.twitch.tv/app/{streamkey}"
+ffmpeg -ar 44100 -ac 2 -acodec pcm_s16le -f s16le -ac 2 -i /dev/zero -f v4l2 -thread_queue_size 10240 -codec:v h264 -s 1920x1080 -i /dev/video0 -codec:v copy -codec:a copy -f flv  rtmp://ber.contribute.live-video.net/app/{streamkey}
 
 # End of file
