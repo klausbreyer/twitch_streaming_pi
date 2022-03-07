@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Source the variable to config the stream kmey.
 source /home/pi/twitch_streaming_pi/key.config
