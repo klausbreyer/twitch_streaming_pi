@@ -44,15 +44,18 @@ Clone the repo in ~
 
 Put the twitch_stream.service file in /etc/systemd/system/
 
-     f
+     sudo ln -s twitch_streaming_pi/twitch_stream.service /etc/systemd/system/
+
+Copy the config, put in your Twitch account stream key.
+Edit the script with a text editor like nano or vim. Find the line with STREAM_KEY and put your actual key there afterwards.
+See <https://stream.twitch.tv/ingests/> for more information and the server near you.
+     $ cp key.config.dist key.config
+
 
 Make the script exectuable with
 
     $ chmod +x /home/pi/twitch_streaming_pi/twitch_stream.sh
 
-Uses your Twitch account stream key in the shell script.
-Edit the script with a text editor like nano or vim. Find the line with {stream_key} and put your actual key there in place of {stream_key} then save the file.
-See https://stream.twitch.tv/ingests/ for more information and the server near you.
 
 Once the service file and shell script are in the right location, you can start the service
 
@@ -64,7 +67,3 @@ Debug
 Make the service start on a reboot or loss of power to the Pi.
 
      systemctl enable twitch_stream
-
-## Future features I want to add to the script:
-
-- stream_key into somewhere configurable.
